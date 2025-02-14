@@ -43,7 +43,7 @@ function Projects() {
           <div className={`project-card ${cardsVisible.includes(0) ? 'visible' : 'slide-in-left'}`}>
             <img src={`./assets/foodbox2.png`} alt="Project 1" />
             <p>Food Box App</p>
-            <a href="https://github.com/your-repo" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/Lordshiva420/foodBox-capstone" target="_blank" rel="noopener noreferrer">
                <Button className="resume-button" variant="filled" color="red">Github</Button>
             </a>
           </div>
@@ -51,7 +51,7 @@ function Projects() {
           <div className={`project-card ${cardsVisible.includes(1) ? 'visible' : 'visible'}`}>
             <img src={`./assets/gitlab.png`} alt="Project 2" />
             <p>Backend Projects</p>
-            <a href="https://github.com/your-repo" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/Lordshiva420?tab=repositories" target="_blank" rel="noopener noreferrer">
                <Button className="resume-button" variant="filled" color="red">Github</Button>
             </a>
           </div>
@@ -59,7 +59,7 @@ function Projects() {
           <div className={`project-card ${cardsVisible.includes(2) ? 'visible' : 'slide-in-right'}`}>
             <img src={`./assets/quiz.png`} alt="Project 3" />
             <p>Quiz App</p>
-            <a href="https://github.com/your-repo" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/Lordshiva420/Online-test-App" target="_blank" rel="noopener noreferrer">
                <Button className="resume-button" variant="filled" color="red">Github</Button>
             </a>
           </div>
