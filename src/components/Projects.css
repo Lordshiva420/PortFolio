@@ -1,0 +1,117 @@
+/* Wrapper styles */
+.project-wrapper {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden;
+  padding-top: 30px; /* Adjust as necessary */
+  padding-bottom: 50px; /* Add padding below */
+  padding-left: 15px;
+}
+
+
+/* Card styles */
+.project-card {
+  opacity: 0; /* Initially hidden */
+  transform: translateX(0); /* Start at center (or hidden off-screen if needed) */
+  transition: transform 1s ease, opacity 1s ease, box-shadow 0.3s ease; /* Smooth transition for transform, opacity, and box-shadow */
+  width: 250px;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #f1f1f1; /* Soft border color */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Initial shadow effect */
+  text-align: center;
+  will-change: transform, opacity, box-shadow; /* Optimizing performance */
+  overflow: hidden; /* Hide overflow to avoid visual distortion */
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease; /* Smooth transition */
+  cursor: pointer; /* Pointer cursor for better interaction */
+}
+
+
+/* Hover effect */
+.project-card:hover {
+  transform: scale(1.05); /* Slightly enlarge card on hover */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* Increase shadow intensity on hover */
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for the image */
+.project-card img {
+  width: 100%;
+  height: 160px; /* Set a fixed height for uniformity */
+  object-fit: cover; /* Ensures images cover the area without distortion */
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  
+}
+
+/* Hover effect for the image: slight zoom */
+.project-card:hover img {
+  transform: scale(1.1); /* Zoom in image */
+}
+
+/* Slide-in from left */
+.project-card.slide-in-left {
+  transform: translateX(-100%); /* Start off-screen to the right */
+}
+
+/* Slide-in from right */
+.project-card.slide-in-right {
+  transform: translateX(100%); /* Start off-screen to the left */
+}
+
+/* When the card is visible, move it to the center */
+.project-card.visible {
+  opacity: 1; /* Make it visible */
+  transform: translateX(0); /* Move to the normal position */
+}
+
+/* Text style */
+.project-card p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+
+/* Adding a subtle gradient background effect */
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(145deg, #f0f0f0, #e0e0e0); /* Gradient background */
+  z-index: -1;
+  border-radius: 12px;
+  filter: blur(10px);
+  opacity: 0.15;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover::before {
+  opacity: 0.25; /* Make gradient more visible on hover */
+}
+
+/* Responsive design for mobile devices */
+
+@media screen and (max-width: 768px) {
+  .project-wrapper {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    text-align: center;
+    padding-top: 460px;
+  }
+
+  .project-card {
+    width: 90%; /* Cards take more width on smaller screens */
+    margin-bottom: 20px; /* Space between cards */
+  }
+
+}

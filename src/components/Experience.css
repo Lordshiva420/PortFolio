@@ -1,0 +1,105 @@
+/* Timeline container */
+
+.exp-wrapper{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    padding: 20px 50px;
+}
+.roadmap{
+   padding: 5px;
+   margin-right: 42px;
+  }
+  .experience-text{
+    padding: 5px;
+    margin-left: 80px;
+    text-align: left;
+  }
+
+  .experience-text h2{
+    text-align: center;
+  }
+  .experience-text ul {
+    list-style-type: disc; /* Default bullet points */
+    margin-left: 20px; /* Indentation for the list */
+  }
+  
+  .experience-text li {
+    margin-bottom: 10px; /* Space between bullet points */
+  }
+  
+  .experience-text li strong {
+    font-weight: bold; /* Make certain key phrases stand out */
+  }
+  
+  /* Timeline Bullet Styles */
+  .timeline-bullet {
+    background-color: #ffffff; /* Default background color */
+    border: 2px solid #cccccc; /* Border color when not active */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 1s ease, border-color 0.3s ease;
+    animation: fillBullet 2s ease-in-out forwards;
+    opacity: 0.1; /* Bullets are initially less opaque */
+  }
+  
+  .timeline-bullet.active {
+    opacity: 1; /* Make bullets fully opaque when active */
+    transition: background-color 1s ease, border-color 0.3s ease;
+    animation: fillBullet 2s ease-in-out forwards;
+  }
+  
+  @keyframes fillBullet {
+    0% {
+      background-color: #ffffff;
+      border-color: #cccccc;
+    }
+    50% {
+      background-color: #e8f6f9;
+      border-color: #e8f6f9;
+    }
+    100% {
+      background-color: #4fd0f1; /* Color to fill the bullet */
+      border-color: #4fd0f1; /* Border color when active */
+      color: white; /* Text color inside the bullet when active */
+    }
+  }
+  
+  
+  .timeline-bullet.active {
+    animation: fillBullet 2s ease-in-out forwards;
+  }
+  
+  /* Timeline items */
+  .mantine-Timeline-item {
+    transition: opacity 2s ease;
+  }
+  
+  /* Optional: Add some hover effect on bullets */
+  .timeline-bullet:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 768px) {
+    .exp-wrapper {
+      flex-direction: column; /* Stack elements vertically on smaller screens */
+      text-align: center;
+      padding-top: 150px;
+    }
+  
+    .roadmap {
+      margin-bottom: 20px; /* Add some space below text */
+      padding-top:20px;
+    }
+  
+    .experience-text {
+      height: 250px; /* Adjust height for smaller devices */
+      max-width: 250px; /* Keep image width equal to height */
+      margin-left: 0px;
+    }
+    .experience-text  h2{
+      padding-bottom: 10px;
+    }
+  }

@@ -1,0 +1,139 @@
+.skill-wrapper{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+  }
+
+  .skills-tech {
+    text-align: center;   
+    padding: 2px 50px;
+  }
+  
+  .tech-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 300px; /* You can adjust the width as per your preference */
+    height: 300px; /* Same for height */
+    border-radius: 50%;
+    padding-top: 35px;
+    /* animation: rotateCircle 20s infinite linear;   */
+  }
+
+  .tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    width: 50px; /* Size of each tech logo */
+    height: 50px; /* Same as above */
+    animation: rotateCircle 7s infinite linear;
+  }
+
+  .tech-logo-wrapper {
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px; /* Adjust the height to suit the logo size */
+  } 
+
+.tech-logo {
+    width: 60px;         /* Set width (can adjust to your preferred size) */
+    height: 60px;        /* Set height (same as width to make it a circle) */
+    border-radius: 50%;  /* Make it round */
+    object-fit: cover;   /* Ensure the image fills the circle without stretching */
+    margin-right: 10px;
+
+  }
+  .tech-name {
+    font-size: 12px; /* Adjust the font size for the tech name */
+    margin-top: 5px; /* Space between logo and name */
+    text-align: center;
+  }
+
+
+  /* For the container */
+.skills-softwares {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+  }
+
+  .soft-list {
+    display: flex;
+    flex-wrap: wrap; /* Allows the items to wrap when they reach the container's width */
+    justify-content: center; /* Centers the logos horizontally */
+    gap: 20px; /* Adds space between the logos */
+    padding: 25px; /* Optional padding for the container */
+  }
+
+  .software-item {
+    display: flex;
+    flex-direction: column; /* Stack the logo and name vertically */
+    position: relative;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(-200px); /* Start from above */
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+  }
+  .software-logo {
+    width: 60px;         /* Set width (can adjust to your preferred size) */
+    height: 60px;        /* Set height (same as width to make it a circle) */
+    border-radius: 50%;  /* Make it round */
+    object-fit: cover;   /* Ensure the image fills the circle without stretching */
+    margin-right: 10px;  /* Optional: Add space between logo and text */
+  }
+
+  /* The falling animation with bounce effect */
+@keyframes fallBounce {
+    0% {
+      transform: translateY(-200px);
+      opacity: 0;
+    }
+    30% {
+      transform: translateY(30px); /* Simulate bounce up */
+      opacity: 0.8;
+    }
+    
+    100% {
+      transform: translateY(0); /* Final position */
+      opacity: 1;
+    }
+  }
+  
+  /* Add a class to apply the animation */
+  .software-item.animate {
+    animation: fallBounce 1s ease forwards;
+  }
+
+  @keyframes rotateCircle {
+    0% {
+      transform: rotate(0deg) translateX(120px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(120px) rotate(-360deg);
+    }
+
+  } 
+
+  @media screen and (max-width: 768px) {
+    .skill-wrapper {
+      flex-direction: column; /* Stack elements vertically on smaller screens */
+      text-align: center;
+    }
+  
+    .skills-tech {
+      margin-bottom: 20px; /* Add some space below text */
+    }
+  
+    .skills-softwares{
+      height: 250px; /* Adjust height for smaller devices */
+      max-width: 250px; /* Keep image width equal to height */
+    }
+  }

@@ -1,0 +1,87 @@
+/* General footer container */
+.contacts-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+}
+
+/* Style for left section */
+.contacts-left {
+  width: 45%;
+  padding: 20px;
+}
+
+.contacts-left h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.footer-text {
+  font-size: 16px;
+  color: #555;
+  margin: 8px 0;
+}
+
+/* Style for right section */
+.contacts-right {
+  width: 45%;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.contacts-right h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Style for form elements */
+.form-input, .form-textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.form-textarea {
+  height: 150px;
+  resize: none;
+}
+
+/* Button style */
+.resume-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #f44336; /* Red color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.resume-button:hover {
+  background-color: #e53935; /* Darker red on hover */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .contacts-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contacts-left, .contacts-right {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
